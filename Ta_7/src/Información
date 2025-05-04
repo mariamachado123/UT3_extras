@@ -1,0 +1,20 @@
+1.¿QUÉ ES UN CONJUNTO?
+    Es una colección bien definida de elementos distitnos entre sí, que comparten
+    una propiedad común.
+
+2.¿CÓMO SE DEFINE LA PERTENENCIA DE ELEMENTOS AL CONJUNTO? ¿PUEDE HABER DUPLICADOS?
+    La pertenencia se indica con el simbolo ∈.
+    No puede haber duplicados en un conjunto, cada elemento aparece una vez.
+
+3.¿QUÉ ES EL CONJUNTO UNIVERSAL?
+    El conjunto 𝑈, es el conjunto que tiene todos los elementos posibles en un
+    contexto dado. Todos los demás conjuntos son subconjuntos de 𝑈.
+
+4.¿CUÁLES SON LAS OPERACIONES PROPIAS DE LOS CONJUNTOS, Y COMO SE EXPRESAN MATEMÁTICAMENTE?
+    Union: A∪B (Todos los elementos que están en A o en B o en ambos)
+    Intersección: A∩B (Elementos que están en ambos conjuntos A y B)
+    Diferencia: A-B (Elementos que están en A pero no en B)
+    Complemento: A^c (Elementos del conjunto universal 𝑈 que no están en A)
+    Diferencia simentrica: A△B (	Elementos que están en A o en B pero no en ambos)
+
+

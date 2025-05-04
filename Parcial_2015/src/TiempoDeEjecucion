@@ -1,0 +1,55 @@
+public IListaOrdenada<T> mezclarCon(ListaOrdenada<T> listaOrdenada){
+        ListaOrdenada<T> listaOrdenadaAux = new ListaOrdenada(); ---O(1)
+        INodo<T> aux = this.primero;----O(1)
+        INodo<T> aux2=listaOrdenada.getPrimero(); ----- O(1)
+        while(aux!=null){ ----O(N)
+            listaOrdenadaAux.insertar(aux.getDato()); -----O(1)
+            aux=aux.getSiguiente(); ---- O(1)
+        }
+        while(aux2!=null){ ----O(M)
+            listaOrdenadaAux.insertar(aux2.getDato()); -----O(1)
+            aux2=aux2.getSiguiente(); -----O(1)
+        }
+        this.primero = null; -----O(1)
+        listaOrdenada.primero = null; -----O(1)
+        return listaOrdenadaAux;-----O(1)
+
+ TOTAL: O(N+M)
+
+  public IListaOrdenada<T> eliminarDuplicados(ListaOrdenada<T> listaOrdenada) {
+         ListaOrdenada<T> listaOrdenadaAux = new ListaOrdenada<>(); -----O(1)
+         INodo<T> aux = this.primero; -----O(1)
+         INodo<T> aux2 = listaOrdenada.getPrimero(); -----O(1)
+
+         // Copiamos los elementos de ambas listas
+         while (aux != null) { ----O(N)
+             listaOrdenadaAux.insertar(aux.getDato()); -----O(1)
+             aux = aux.getSiguiente(); -----O(1)
+         }
+         while (aux2 != null) { ----O(M)
+             listaOrdenadaAux.insertar(aux2.getDato()); -----O(1)
+             aux2 = aux2.getSiguiente(); -----O(1)
+         }
+
+         // Eliminamos duplicados
+         INodo<T> actual = listaOrdenadaAux.getPrimero(); -----O(1)
+         while (actual != null) { ----O(P)
+             INodo<T> comparador = actual.getSiguiente(); -----O(1)
+             INodo<T>anterior = actual; -----O(1)
+             while (comparador != null) { ----O(Q)
+                 if (actual.getDato().equals(comparador.getDato())) { -----O(1)
+                     anterior.setSiguiente(comparador.getSiguiente()); -----O(1)
+                     comparador=comparador.getSiguiente(); -----O(1)
+                 } else {
+                     anterior=comparador; -----O(1)
+                     comparador = comparador.getSiguiente(); -----O(1)
+                 }
+             }
+             actual = actual.getSiguiente(); -----O(1)
+         }
+
+         this.primero = null; -----O(1)
+         listaOrdenada.primero = null; -----O(1)
+         return listaOrdenadaAux; -----O(1)
+  }
+  TOTAL: O(N+M + (P*Q))

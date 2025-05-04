@@ -1,0 +1,46 @@
+
+public class Corchetes {
+    public static class Nodo {
+        char valor; ---O(1)
+        Nodo siguiente; ---- O(1)
+
+        public Nodo(char valor) { ---- O(1)
+            this.valor = valor; ----O(1)
+        }
+    }
+
+    private Nodo cabeza; ---- O(1)
+
+    public boolean controlCorchetes(List<Character> entrada) {
+        Stack<Character> pilaTemp = new Stack<>(); ----O(1)
+        if (entrada==null || entrada.isEmpty()) { ----O(1)
+            System.out.println("Expresión vacía"); ----O(1)
+            return false; ----O(1)
+        }
+        cabeza=new Nodo(entrada.get(0)); ----O(1)
+        Nodo actual=cabeza; ----O(1)
+        for (int i = 1; i < entrada.size(); i++) { ---O(N)
+            actual.siguiente=new Nodo(entrada.get(i)); ----O(1)
+            actual=actual.siguiente; ----O(1)
+        }
+        actual=cabeza; ----O(1)
+        if(actual.siguiente==null) { ----O(1)
+            return false; ----O(1)
+        }
+        while(actual!=null) { ---O(N)
+            if(actual.valor=='{') {----O(1)
+                try {
+                    pilaTemp.push('{'); ----O(1)
+                    }catch (Exception e){ ----O(1)
+                    return false; ----O(1)
+                }
+            }else if(actual.valor=='}'){ ----O(1)
+                if(pilaTemp.isEmpty()) {----O(1)
+                    return false; ----O(1)
+                }
+                pilaTemp.pop(); ----O(1)
+            }actual=actual.siguiente; ----O(1)
+        }return pilaTemp.isEmpty(); ----O(1)
+        }
+    }
+

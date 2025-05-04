@@ -1,0 +1,29 @@
+COM:
+unión(TConjunto<Telemento> otroConjunto)
+	Conjunto_complemento nuevoConjunto<-- new Conjunto_complemento() ---- O(1)
+
+	PARA CADA Telemento elemento en este conjunto -----O(N)
+		insertar el elemento al nuevoConjunto -----(O1)
+	FIN PARA CADA
+
+	PARA CADA Telemento elmento en otroConjunto---- O(M)
+		insertar el elemento al nuevoConjunto --- O(1)
+	FIN PARA CADA
+
+	devolver nuevoConjunto ---O(1)
+FIN
+
+intersección(TConjunto<Telemento> otroConjunto)
+	Conjunto_complemento nuevoConjunto<--new Conjunto_complemento() ----O(1)
+
+	PARA CADA Telemento elemento en este conjunto ----O(N)
+		SI el otroConjunto contiene el elemento ENTONCES ----O(M)
+			el nuevoConjunto inserta el elemento ----- O(1)
+		FIN SI
+	FIN PARA CADA
+
+	devolver nuevoConjunto ----O(1)
+FIN
+
+Unión- Tiempo de ejecución: O(N+M)
+Intersección- Tiempo de ejecución: O(N*M)

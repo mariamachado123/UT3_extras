@@ -1,0 +1,49 @@
+COM:
+public class almacen()
+
+	ArrayList artículos
+	int valor
+
+	public almacen(list artículos)
+	list articulos<-- list artículos
+	valor <--valor
+
+	public void ordenaParesImpares()
+	ArrayList nuevaListaImpares <--[]
+	ArrayList nuevaListaPares <--[]
+
+	PARA CADA elemento en artículos
+		SI elemento MOD 2==0 ENTONCES
+			nuevaListaPares.agregar(elemento)
+		FIN SI
+		SINO
+			nuevaListaImpares.agregar(elemento)
+		FIN SINO
+	FIN PARA CADA
+
+	ArrayList nuevaListaOrdenadaImpares<--[]
+	PARA CADA elemento en nuevaListImpares
+		insertarenOrdenAscendente(nuevaListaOrdenadaImpares,elemento)
+	FIN PARA CADA
+
+	ArrayList nuevaListaOrdenadaPares<--[]
+	PARA CADA elemento en nuevaListPares
+		insertarenOrdenAscendente(nuevaListaOrdenadaPares,elemento)
+	FIN PARA CADA
+
+	articulos<-- nuevaListaOrdenadaImpares + insertarenOrdenAscendente
+
+
+	public void insertarenOrdenAscendente(lista,elemento)
+		SI lista es vacia ENTONCES
+			lista.agregar(elemento)
+		FIN SI
+		SINO
+			pos<--0
+			MIENTRAS pos<lista.tamaño y lista[pos]<elemento HACER
+				pos<--pos+1
+			FIN MIENTRAS
+			lista.insertar(pos,elemento)
+		FIN SINO
+	FIN
+FIN

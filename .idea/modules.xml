@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Parcial_2015/Parcial_2015.iml" filepath="$PROJECT_DIR$/Parcial_2015/Parcial_2015.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parcial_2016A/Parcial_2016A.iml" filepath="$PROJECT_DIR$/Parcial_2016A/Parcial_2016A.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parcial_2016/Parcial_2016B.iml" filepath="$PROJECT_DIR$/Parcial_2016/Parcial_2016B.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parcial_2019/Parcial_2019.iml" filepath="$PROJECT_DIR$/Parcial_2019/Parcial_2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ta_10/Ta_10.iml" filepath="$PROJECT_DIR$/Ta_10/Ta_10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ta_11/Ta_11.iml" filepath="$PROJECT_DIR$/Ta_11/Ta_11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ta_13/Ta_13.iml" filepath="$PROJECT_DIR$/Ta_13/Ta_13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ta_6/Ta_6.iml" filepath="$PROJECT_DIR$/Ta_6/Ta_6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ta_7/Ta_7.iml" filepath="$PROJECT_DIR$/Ta_7/Ta_7.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,50 @@
+STRING:
+    Se sabe que cada caracter de un String ocupa 2 bytes.
+    Entonces el consumo de memoria total sería:
+                2*n(siendo n la cantidad de caracteres)
+LINKED LIST:
+    Se sabe que en las listas enlazadas, tenemos que la referencia al objeto mismo
+    ocupa 8 bytes, luego en este mismo nodo, como se referencia al anterior y al siguiente
+    cada uno ocupa 8 bytes también.
+    Por lo tanto, solamente por referencias tendriamos un total de consumo de : 24 bytes.
+    Esto sin contar los datos del objeto dentro (en este caso, un String)
+
+    EJEMPLO:
+        Si tuvieramos 3 sucursales dentro de LL, "Montevideo, "Punta del Este" y
+        "Colonia, podríamos hacer un cálculo de ejemplo de cuanta memoria se consume.
+        Sabemos que cada nodo tiene una sobrecarga de 12 Bytes, entonces:
+        MONTEVIDEO:
+            Sobrecarga:12
+            Caracteres:10
+            TOTAL= 12 + 10*2= 32 + 24 = 56 bytes
+
+        PUNTA DEL ESTE
+            Sobrecarga:12
+            Caracteres:14
+            TOTAL= 12 + 14*2=30 + 24 = 54 bytes
+
+        COLONIA
+            Sobrecarga:12
+            Caracteres:6
+            TOTAL=12 + 6*2=24 + 24 = 48 bytes
+
+        TOTAL DE LAS 3 SUCURSALES EN UN LL:
+        48 + 56 + 54 = 158 bytes
+
+        En este ejemplo se demuestra como se calcularia el consumo de memoria en un LL.
+
+SIZE():
+    Este método, al solo contar la cantidad, no consume mucha memoria significativa.
+
+CONTAINS():
+    Al buscar elementos, va a depender de la cantidad de elementos que haya en la lista. Osea,
+    depende de n.
+    Luego, como tambien va a depender de la longitud de la cadena, dependerá también de m.
+    Osea, que la operacion sería:
+    O(n*m)
+
+REMOVE():
+    El nodo se elimina, pero puede permanecer en la memoria si aun esta referenciada.
+    Esto no implica que aumente significativamente la memoria.
+
+
